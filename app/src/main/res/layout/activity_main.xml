@@ -39,7 +39,7 @@
     <RadioButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Search Yahoo"
+        android:text="Search Ask.com"
         android:id="@+id/radioButton2"
         android:layout_below="@+id/switch1"
         android:layout_alignRight="@+id/button"
@@ -67,7 +67,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/webView"
         android:layout_centerVertical="true"
-        android:layout_alignRight="@+id/switch1"
-        android:layout_alignEnd="@+id/switch1" />
+        android:layout_alignEnd="@+id/switch1"
+        android:layout_marginTop="50dp"
+        />
 
 </RelativeLayout>
