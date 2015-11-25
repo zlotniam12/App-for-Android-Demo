@@ -1,28 +1,29 @@
 package com.example.ubuntu.myapplication;
 
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.ViewPager;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.webkit.WebView;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.view.View.OnClickListener;
-import android.widget.Switch;
+
 
 public class MainActivity extends FragmentActivity {
 
+    TabsPagerAdapter mCustomPagerAdapter;
+    ViewPager mViewPager;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
 
+        mCustomPagerAdapter = new TabsPagerAdapter(getSupportFragmentManager());
 
+        mViewPager = (ViewPager) findViewById(R.id.pager);
+        mViewPager.setAdapter(mCustomPagerAdapter);
 
     }
 

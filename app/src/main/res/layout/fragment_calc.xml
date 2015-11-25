@@ -3,19 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
-    <fragment android:name="com.example.ubuntu.myapplication.CalcFragment"
-        android:id="@+id/fragment_calc"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"
-        android:background="#ffffff"
-
-        />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
-        android:layout_height="221dp"
-        android:text="New Button"
+        android:layout_height="wrap_content"
+        android:text="Go"
         android:id="@+id/button2"
-        android:layout_gravity="center_horizontal" />
+        android:layout_gravity="right"
+        android:layout_marginTop="100dp"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner" />
 </LinearLayout>

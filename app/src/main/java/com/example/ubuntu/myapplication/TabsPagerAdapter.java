@@ -29,7 +29,19 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 	@Override
 	public int getCount() {
 		// get item count - equal to number of tabs
-		return 4;
+		return 2;
 	}
+	@Override
+	public CharSequence getPageTitle(int index) {
+		switch (index) {
+            case 0:
+                // Search fragment activity
+                return "Search";
+            case 1:
+                // Spectra fragment activity
+                return "Calculate";
+        }
+        return null;
+		}
 
 }
