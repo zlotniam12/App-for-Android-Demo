@@ -4,11 +4,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import edu.sbu.cs.android.NMR.core.DrawFragment;
-import edu.sbu.cs.android.NMR.core.HomeFragment;
-import edu.sbu.cs.android.NMR.core.QuestionsFragment;
-import edu.sbu.cs.android.NMR.core.SpectraFragment;
-
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
 	public TabsPagerAdapter(FragmentManager fm) {
@@ -21,16 +16,10 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		switch (index) {
 		case 0:
 			// Search fragment activity
-			return new HomeFragment();
+			return new SearchFragment();
 		case 1:
 			// Spectra fragment activity
-			return new SpectraFragment();
-		case 2:
-			// Questions fragment activity
-			return new QuestionsFragment();
-		case 3:
-			// draw fragment activity
-			return new DrawFragment();
+			return new CalcFragment();
 			
 		}
 
