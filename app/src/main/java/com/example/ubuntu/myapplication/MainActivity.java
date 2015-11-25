@@ -5,13 +5,16 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.support.v7.app.ActionBarActivity;
 import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RadioGroup;
 
 
-public class MainActivity extends FragmentActivity {
-
+public class MainActivity extends AppCompatActivity {
+    Toolbar toolbar;
     TabsPagerAdapter mCustomPagerAdapter;
     ViewPager mViewPager;
     @Override
@@ -19,7 +22,8 @@ public class MainActivity extends FragmentActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
-
+        toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
         mCustomPagerAdapter = new TabsPagerAdapter(getSupportFragmentManager());
 
         mViewPager = (ViewPager) findViewById(R.id.pager);
@@ -45,8 +49,13 @@ public class MainActivity extends FragmentActivity {
         if (id == R.id.action_settings) {
             return true;
         }
+        switch (item.getItemId()) {
+            case R.id.action_devinfo: {
+                return true;
+            }
+            default:
+                return super.onOptionsItemSelected(item);
+        }
 
-        return super.onOptionsItemSelected(item);
     }
-
 }

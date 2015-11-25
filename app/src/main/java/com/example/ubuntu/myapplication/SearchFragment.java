@@ -47,7 +47,6 @@ public class SearchFragment extends Fragment {
 //        }
             str = mEditText.getText().toString();
             if (rdbtgoogle.isChecked()){
-                rdbtaskcom.toggle();
                 if (!swImage.isChecked());
                 wbsearchresults.loadUrl("https://mamma.com/result/" + str +"webd ");
                 if (swImage.isChecked());
@@ -56,7 +55,6 @@ public class SearchFragment extends Fragment {
                 }
             }
             if(rdbtaskcom.isChecked()){
-                rdbtgoogle.toggle();
                 if (!swImage.isChecked());{
                     wbsearchresults.loadUrl("http://www.ask.com/web?q=" + str + "&qsrc=0&o=0&l=dir&qo=homepageSearchBox");
                 }
