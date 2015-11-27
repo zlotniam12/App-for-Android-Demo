@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Switch;
@@ -19,8 +20,8 @@ import android.view.View.OnClickListener;
  * Created by ubuntu on 11/25/15.
  */
 public class SearchFragment extends Fragment {
-    RadioButton rdbtgoogle;
-    RadioButton rdbtaskcom;
+    CheckBox rdbtgoogle;
+    CheckBox rdbtaskcom;
     WebView wbsearchresults;
     EditText mEditText;
     Button btGo;
@@ -30,8 +31,8 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_search, container, false);
-        rdbtgoogle = (RadioButton)rootView.findViewById(R.id.radioButton);
-        rdbtaskcom = (RadioButton)rootView.findViewById(R.id.radioButton2);
+        rdbtgoogle = (CheckBox)rootView.findViewById(R.id.radioButton);
+        rdbtaskcom = (CheckBox)rootView.findViewById(R.id.radioButton2);
         wbsearchresults = (WebView)rootView.findViewById(R.id.webView);
         mEditText = (EditText)rootView.findViewById(R.id.editText);
         mEditText.setInputType(InputType.TYPE_CLASS_TEXT);

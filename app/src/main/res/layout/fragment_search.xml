@@ -13,7 +13,7 @@
         android:layout_centerHorizontal="true"
         android:layout_gravity="center_horizontal" />
 
-    <RadioButton
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Google"
@@ -22,7 +22,12 @@
         android:layout_below="@+id/switch1"
         android:layout_gravity="right" />
 
-    <RadioButton
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"></RadioGroup>
+
+    <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Ask.com"
