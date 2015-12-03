@@ -17,14 +17,17 @@
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="45dp">
-        <android.support.v4.view.PagerTabStrip
-            android:id="@+id/pager_tab_strip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:background="#8A2BE2"
-            android:textColor="#fff" />
+        android:paddingTop="35dp">
+
     </android.support.v4.view.ViewPager >
+    <com.example.ubuntu.myapplication.SlidingTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="top"
+        android:background= "#edba89e2"
+        android:textColor="#fff"
+        android:paddingTop="50dp"
+        />
 
 </RelativeLayout>

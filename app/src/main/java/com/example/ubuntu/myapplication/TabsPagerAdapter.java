@@ -6,8 +6,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 
 public class TabsPagerAdapter extends FragmentPagerAdapter {
 
-	public TabsPagerAdapter(FragmentManager fm) {
+	private CharSequence tabNames[];
+	private int tabNum;
+	public TabsPagerAdapter(FragmentManager fm, CharSequence mNames[], int mTabNum) {
 		super(fm);
+		this.tabNames = mNames;
+		this.tabNum = mTabNum;
 	}
 
 	@Override
@@ -31,17 +35,10 @@ public class TabsPagerAdapter extends FragmentPagerAdapter {
 		// get item count - equal to number of tabs
 		return 2;
 	}
+
 	@Override
-	public CharSequence getPageTitle(int index) {
-		switch (index) {
-            case 0:
-                // Search fragment activity
-                return "Search";
-            case 1:
-                // Spectra fragment activity
-                return "Calculate";
-        }
-        return null;
-		}
+	public CharSequence getPageTitle(int position) {
+		return tabNames[position];
+	}
 
 }

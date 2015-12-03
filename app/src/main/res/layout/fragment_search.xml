@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <Switch
+        android:paddingTop="50dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Picture/Video"
@@ -14,25 +14,20 @@
         android:layout_gravity="center_horizontal" />
 
     <CheckBox
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Google"
         android:id="@+id/radioButton"
-        android:onClick=""
         android:layout_below="@+id/switch1"
         android:layout_gravity="right" />
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"></RadioGroup>
 
     <CheckBox
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Search Ask.com"
         android:id="@+id/radioButton2"
-        android:onClick=""
         android:layout_below="@+id/switch1"
         android:layout_alignRight="@+id/button"
         android:layout_alignEnd="@+id/button"

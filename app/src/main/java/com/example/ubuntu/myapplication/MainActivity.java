@@ -15,8 +15,11 @@ import android.widget.RadioGroup;
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
-    TabsPagerAdapter mCustomPagerAdapter;
+    TabsPagerAdapter tpAdapter;
     ViewPager mViewPager;
+    SlidingTabLayout tabLayout;
+    private String[] tabs = {"Search", "Calculate"};
+    private int tabsNum = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,10 +27,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        mCustomPagerAdapter = new TabsPagerAdapter(getSupportFragmentManager());
-
+       tpAdapter = new TabsPagerAdapter(getSupportFragmentManager(), tabs, tabsNum);
         mViewPager = (ViewPager) findViewById(R.id.pager);
-        mViewPager.setAdapter(mCustomPagerAdapter);
+        mViewPager.setAdapter(tpAdapter);
+        tabLayout = (SlidingTabLayout) findViewById(R.id.tabs);
+        tabLayout.setDistributeEvenly(true); // To make the Tabs Fixed set this true, This makes the tabs Space Evenly in Available width
+        tabLayout.setViewPager(mViewPager);
 
     }
 
