@@ -6,20 +6,32 @@ import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.support.v7.app.ActionBarActivity;
-import android.text.InputType;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.RadioGroup;
-
+import android.widget.Toast;
+/**
+ * The MainActivity defines what is viewed on all other activities, handling the viewing of each
+ * activity in its fragment with a viewPage. It also defines what what happens when option in the
+ * main menu on the toolbar, which is visble in all fragments, is clicked.
+ *
+ * @author Alyssa Zlotnicki
+ * @version 12/3/15.
+ */
 
 public class MainActivity extends AppCompatActivity {
     Toolbar toolbar;
     TabsPagerAdapter tpAdapter;
     ViewPager mViewPager;
     SlidingTabLayout tabLayout;
-    private String[] tabs = {"Search", "Calculate"};
-    private int tabsNum = 2;
+    private String[] tabs = {"Search", "Calculate Tips", "Calculate Other Things"};
+    private int tabsNum = 3;
+
+    /**
+     * Defines what happens when the app is opened up, and the first view the user
+     * sees is created. This is where the defining of what what is displayed on each tab
+     * is accomplished
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,13 +63,14 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
         switch (item.getItemId()) {
-            case R.id.action_devinfo: {
+            case R.id.action_settings: {
                 return true;
             }
+            case R.id.action_appcreator:
+                Toast.makeText(getApplicationContext(), "Alyssa Zlotnicki is the app creator", Toast.LENGTH_LONG).show();
+
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

@@ -1,8 +1,8 @@
 package com.example.ubuntu.myapplication;
 
+
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-
 import android.text.InputType;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,24 +42,21 @@ public class SearchFragment extends Fragment {
         {
             @Override
             public void onClick(View rootView){
-//        for (int i =0; i < mEditText.getText().toString().length()-1; i++) {
-//            if()
-//            str = str + mEditText.getText().toString().charAt(i);
-//        }
             str = mEditText.getText().toString();
             if (rdbtgoogle.isChecked()){
-                if (!swImage.isChecked());
-                wbsearchresults.loadUrl("https://mamma.com/result/" + str +"webd ");
-                if (swImage.isChecked());
+                if (!swImage.isChecked())
+                wbsearchresults.loadUrl("https://www.google.com/search?q=" + str);
+                if (swImage.isChecked())
                 {
-                    wbsearchresults.loadUrl("https://mamma.com/result/" + str + "/images");
+                    wbsearchresults.loadUrl("https://www.google.com/search?q=" + str + "&biw=" +
+                            "959&bih=683&source=lnms&tbm=isch&sa=X&ved=0ahUKEwii4LagtMDJAhWmz4MKHVFyAVUQ_AUICSgE");
                 }
             }
             if(rdbtaskcom.isChecked()){
-                if (!swImage.isChecked());{
+                if (!swImage.isChecked()){
                     wbsearchresults.loadUrl("http://www.ask.com/web?q=" + str + "&qsrc=0&o=0&l=dir&qo=homepageSearchBox");
                 }
-                if (swImage.isChecked());{
+                if (swImage.isChecked()){
                     wbsearchresults.loadUrl("http://www.ask.com/pictures?q=" + str + "&qsrc=1&o=0&l=dir&qo=serpSearchTopBox");}
             }
         }
