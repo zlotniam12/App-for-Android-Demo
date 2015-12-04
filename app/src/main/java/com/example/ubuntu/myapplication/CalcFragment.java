@@ -60,7 +60,7 @@ public class CalcFragment extends Fragment {
                         double answerTwo = Double.parseDouble(inputTwo.getText().toString());
                         double calc;
                         answerTwo *= .01;
-                        calc = answerOne + answerOne * answerTwo;
+                        calc = answerOne * answerTwo;
 
                         viewAnswer.setText(calc + "");
             }

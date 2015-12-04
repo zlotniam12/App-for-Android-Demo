@@ -40,8 +40,9 @@ public class CalcOtherFragment extends Fragment{
         viewAnswer = (TextView) rootView.findViewById(R.id.tvAns2);
         tv = (TextView) rootView.findViewById(R.id.textView5);
         spin = (Spinner) rootView.findViewById(R.id.spinner);
-        this.spinList = new String[] {"The meaning of life", "The airspeed velocity of an unladen European swallow", };
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_spinner_item, spinList);
+        this.spinList = new String[] {"The meaning of life", "The airspeed velocity of an unladen "
+                + "\n" +"European swallow", };
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_dropdown_item, spinList);
         spin.setAdapter(adapter);
         calcbt=(Button)rootView.findViewById(R.id.button3);
         calcbt.setOnClickListener(new View.OnClickListener() {
