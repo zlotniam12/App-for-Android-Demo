@@ -71,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Alyssa Zlotnicki is the app creator", Toast.LENGTH_LONG).show();
 
                 return true;
+            case R.id.action_happybirthday:
+                Toast.makeText(getApplicationContext(), "Happy Birthday Chris!", Toast.LENGTH_LONG).show();
+
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

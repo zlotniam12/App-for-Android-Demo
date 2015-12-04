@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
 /**
@@ -28,6 +29,7 @@ public class CalcFragment extends Fragment {
     TextView tv1;
     TextView tv2;
     Button calcbt;
+
     /**
      * Creates the view to be displayed and assigns an id to it that matches the id of the xml file,
      * assigns ids to the variables that match those in the corresponding xml file.
@@ -60,7 +62,7 @@ public class CalcFragment extends Fragment {
                         double answerTwo = Double.parseDouble(inputTwo.getText().toString());
                         double calc;
                         answerTwo *= .01;
-                        calc = answerOne * answerTwo;
+                        calc = answerOne + answerOne * answerTwo;
 
                         viewAnswer.setText(calc + "");
             }

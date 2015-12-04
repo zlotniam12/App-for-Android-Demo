@@ -41,7 +41,7 @@ public class CalcOtherFragment extends Fragment{
         tv = (TextView) rootView.findViewById(R.id.textView5);
         spin = (Spinner) rootView.findViewById(R.id.spinner);
         this.spinList = new String[] {"The meaning of life", "The airspeed velocity of an unladen "
-                + "\n" +"European swallow", };
+                + "\n" +"European swallow", "What is Chris' Birthday?"};
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), R.layout.simple_spinner_dropdown_item, spinList);
         spin.setAdapter(adapter);
         calcbt=(Button)rootView.findViewById(R.id.button3);
@@ -57,6 +57,8 @@ public class CalcOtherFragment extends Fragment{
                 viewAnswer.setText("The ultimate answer is 42");
                if(spin.getSelectedItemPosition() == 1)
                 viewAnswer.setText("11 meters per second");
+                if(spin.getSelectedItemPosition() == 2)
+                    viewAnswer.setText("Chris' Birthday is December 5th");
             }
         });
         return rootView;

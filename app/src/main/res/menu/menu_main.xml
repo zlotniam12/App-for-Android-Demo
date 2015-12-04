@@ -6,4 +6,7 @@
     <item android:id="@+id/action_appcreator"
         android:title="Who Created this App?"
         app:showAsAction="never"/>
+    <item android:id="@+id/action_happybirthday"
+        android:title="Today's Birthday"
+        app:showAsAction="never"/>
 </menu>
